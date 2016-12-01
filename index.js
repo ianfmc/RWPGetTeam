@@ -2,7 +2,7 @@ var AWS = require('aws-sdk');
 
 exports.handler = function(event, context, callback) {
     
-    var seasonID = event.teamID.toString();
+    var teamID = event.teamID.toString();
     var docClient = new AWS.DynamoDB.DocumentClient({region: 'us-east-1'});
     var seasonParams = {
         TableName : 'Team',
