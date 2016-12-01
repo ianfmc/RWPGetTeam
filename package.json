@@ -4,12 +4,12 @@
   "description": "Lamdba Function to add RWP Team to DynamoDB",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./spec/add.spec.js",
-    "cover": "istanbul cover ./node_modules/.bin/_mocha --report html ./spec/add.spec.js"
+    "test": "mocha ./spec/*.spec.js",
+    "cover": "istanbul cover ./node_modules/.bin/_mocha --report html ./spec/*.spec.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ianfmc/RWPAddTeam.git"
+    "url": "git+https://github.com/ianfmc/RWPGetTeam.git"
   },
   "keywords": [
     "RWP",
@@ -20,11 +20,10 @@
   "author": "Ian F. McCallum",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ianfmc/RWPAddTeam/issues"
+    "url": "https://github.com/ianfmc/RWPGetTeam/issues"
   },
-  "homepage": "https://github.com/ianfmc/RWPAddTeam#readme",
+  "homepage": "https://github.com/ianfmc/RWPGetTeam#readme",
   "devDependencies": {
-    "aws-sdk": "^2.6.11",
     "aws-sdk-mock": "^1.5.0",
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
@@ -32,11 +31,6 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "aws-sdk-mock": "^1.5.0",
-    "chai": "^3.5.0",
-    "aws-sdk": "^2.6.11",
-    "aws-lambda-mock-context": "^3.0.1",
-    "sinon": "^1.17.6",
-    "istanbul": "^0.4.5"
+    "aws-sdk": "^2.6.11"
   }
 }
