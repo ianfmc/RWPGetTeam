@@ -11,7 +11,7 @@ exports.handler = function(event, context, callback) {
         },
     }
     console.log(teamParams);
-    docClient.get(seasonParams, function(err, data) {
+    docClient.get(teamParams, function(err, data) {
         if (err) {
             callback(new Error('Unknown Team'));
         }
