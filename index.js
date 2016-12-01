@@ -4,16 +4,16 @@ exports.handler = function(event, context, callback) {
     
     var teamID = event.teamID.toString();
     var docClient = new AWS.DynamoDB.DocumentClient({region: 'us-east-1'});
-    var seasonParams = {
+    var teamParams = {
         TableName : 'Team',
         Key : {
             teamID: teamID
         },
     }
-    console.log(seasonParams);
+    console.log(teamParams);
     docClient.get(seasonParams, function(err, data) {
         if (err) {
-            callback(new Error('Unknown Season'));
+            callback(new Error('Unknown Team'));
         }
         else {
             callback(null, data);
